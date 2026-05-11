@@ -5,8 +5,14 @@
 @font-face {
     font-family: 'advanced_led_board-7regular';
     src: url('advanced_led_board-7-webfont.woff2') format('woff2'),
-         url('advanced_led_board-7-webfont.woff') format('woff');
+        url('advanced_led_board-7-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+
+}
+
+zegar {
+    font-family: 'advanced_led_board-7regular', sans-serif;
+    font-size: 200px;
 
 }
