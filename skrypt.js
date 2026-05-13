@@ -32,3 +32,19 @@ async function getPogoda() {
 
 getPogoda();
 setInterval(getPogoda, 600000); // 10 minut
+
+const ciekawostki = [
+    "Ciekawostka: JavaScript został stworzony w zaledwie 10 dni przez Brendana Eicha w 1995 r.",
+    "Ciekawostka: Słowo 'bug' wzięło się od prawdziwej ćmy, która zablokowała przekaźnik w komputerze Mark II w 1947 r.",
+    "Ciekawostka: Pierwszą programistką na świecie była Ada Lovelace, pracująca z maszyną analityczną w 1843 r.",
+    "Ciekawostka: Pierwsza mysz komputerowa z 1964 r. była wykonana z drewna.",
+    "Ciekawostka: Margaret Hamilton ręcznie napisała kluczowy kod dla misji Apollo 11, który uratował lądowanie na Księżycu."
+];
+
+function losujCiekawostke() {
+    const losowyIndex = Math.floor(Math.random() * ciekawostki.length);
+    document.getElementById('fact').textContent = ciekawostki[losowyIndex];
+}
+
+losujCiekawostke();
+setInterval(losujCiekawostke, 15000); // co 15 sekund
