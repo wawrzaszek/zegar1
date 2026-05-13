@@ -31,7 +31,7 @@ async function getPogoda() {
 }
 
 getPogoda();
-setInterval(getPogoda, 600000); // 10 minut
+setInterval(getPogoda, 600000);
 
 const ciekawostki = [
     "Ciekawostka: JavaScript został stworzony w zaledwie 10 dni przez Brendana Eicha w 1995 r.",
@@ -47,4 +47,4 @@ function losujCiekawostke() {
 }
 
 losujCiekawostke();
-setInterval(losujCiekawostke, 15000); // co 15 sekund
+setInterval(losujCiekawostke, 15000);
