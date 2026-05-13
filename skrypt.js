@@ -18,3 +18,17 @@ setInterval(() => {
     const dzien = String(data.getDate()).padStart(2, '0');
     dataElement.textContent = `${rok}-${miesiac}-${dzien}`;
 }, 1000);
+
+async function getPogoda() {
+    try {
+        const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=49.8225&longitude=19.0444&current_weather=true');
+        const data = await response.json();
+        const temp = data.current_weather.temperature;
+        document.getElementById('weather').textContent = `Bielsko-Biala: ${temp}°C`;
+    } catch (error) {
+        document.getElementById('weather').textContent = 'Blad pogody';
+    }
+}
+
+getPogoda();
+setInterval(getPogoda, 600000); // 10 minut
